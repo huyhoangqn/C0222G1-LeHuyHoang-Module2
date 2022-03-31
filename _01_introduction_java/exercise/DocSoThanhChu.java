@@ -13,8 +13,8 @@ public class DocSoThanhChu {
         int hangDonVi = number % 10;
 
         String soThanhChu = "";
-
         if (number >= 0 && number <= 999) {
+
             switch (hangTram) {
                 case 1:
                     soThanhChu = "one hundred ";
@@ -44,60 +44,101 @@ public class DocSoThanhChu {
                     soThanhChu = "nine hundred ";
                     break;
             }
-            switch (hangChuc) {
-                case 2:
-                    soThanhChu += "twenty ";
-                    break;
-                case 3:
-                    soThanhChu += "thirty ";
-                    break;
-                case 4:
-                    soThanhChu += "forty ";
-                    break;
-                case 5:
-                    soThanhChu += "fifty ";
-                    break;
-                case 6:
-                    soThanhChu += "sixty ";
-                    break;
-                case 7:
-                    soThanhChu += "seventy ";
-                    break;
-                case 8:
-                    soThanhChu += "eighty ";
-                    break;
-                case 9:
-                    soThanhChu += "ninety ";
-                    break;
+
+            if (hangTram != 0 && (hangChuc != 0 || hangDonVi != 0)) {
+                soThanhChu += "and ";
             }
-            switch (hangDonVi) {
-                case 1:
-                    soThanhChu += "one";
-                    break;
-                case 2:
-                    soThanhChu += "two";
-                    break;
-                case 3:
-                    soThanhChu += "three";
-                    break;
-                case 4:
-                    soThanhChu += "four";
-                    break;
-                case 5:
-                    soThanhChu += "five";
-                    break;
-                case 6:
-                    soThanhChu += "six";
-                    break;
-                case 7:
-                    soThanhChu += "seven";
-                    break;
-                case 8:
-                    soThanhChu += "eight";
-                    break;
-                case 9:
-                    soThanhChu += "nine";
-                    break;
+            if (hangChuc >= 2) {
+                switch (hangChuc) {
+                    case 2:
+                        soThanhChu += "twenty ";
+                        break;
+                    case 3:
+                        soThanhChu += "thirty ";
+                        break;
+                    case 4:
+                        soThanhChu += "forty ";
+                        break;
+                    case 5:
+                        soThanhChu += "fifty ";
+                        break;
+                    case 6:
+                        soThanhChu += "sixty ";
+                        break;
+                    case 7:
+                        soThanhChu += "seventy ";
+                        break;
+                    case 8:
+                        soThanhChu += "eighty ";
+                        break;
+                    case 9:
+                        soThanhChu += "ninety ";
+                        break;
+                }
+            } else if (hangChuc == 1) {
+                switch (hangDonVi) {
+                    case 1:
+                        soThanhChu += "eleven";
+                        break;
+                    case 2:
+                        soThanhChu += "twelve";
+                        break;
+                    case 3:
+                        soThanhChu += "thirteen";
+                        break;
+                    case 4:
+                        soThanhChu += "fourteen";
+                        break;
+                    case 5:
+                        soThanhChu += "fifteen";
+                        break;
+                    case 6:
+                        soThanhChu += "sixteen";
+                        break;
+                    case 7:
+                        soThanhChu += "seventeen";
+                        break;
+                    case 8:
+                        soThanhChu += "eighteen";
+                        break;
+                    case 9:
+                        soThanhChu += "nineteen";
+                        break;
+                    case 0:
+                        soThanhChu += "ten";
+                        break;
+                }
+            }
+            if (hangChuc != 1) {
+                switch (hangDonVi) {
+                    case 1:
+                        soThanhChu += "one";
+                        break;
+                    case 2:
+                        soThanhChu += "two";
+                        break;
+                    case 3:
+                        soThanhChu += "three";
+                        break;
+                    case 4:
+                        soThanhChu += "four";
+                        break;
+                    case 5:
+                        soThanhChu += "five";
+                        break;
+                    case 6:
+                        soThanhChu += "six";
+                        break;
+                    case 7:
+                        soThanhChu += "seven";
+                        break;
+                    case 8:
+                        soThanhChu += "eight";
+                        break;
+                    case 9:
+                        soThanhChu += "nine";
+                        break;
+                }
             }
             if (hangTram == 0 && hangChuc == 0 && hangDonVi == 0) {
                 soThanhChu = "zero";
