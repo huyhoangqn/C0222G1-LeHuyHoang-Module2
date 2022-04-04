@@ -2,7 +2,7 @@ package _03_loop.exercise;
 
 import java.util.Scanner;
 
-public class XoaPhanTuKhoiMang {
+public class DeleteElementInArray {
     public static void main(String[] args) {
         int[] numbers = {2, 4, 5, 7, 8, 10, 9, 11, 20, 11};
         int indexRemove = -1;

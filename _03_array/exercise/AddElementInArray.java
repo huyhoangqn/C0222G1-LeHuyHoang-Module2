@@ -2,7 +2,7 @@ package _03_loop.exercise;
 
 import java.util.Scanner;
 
-public class ThemPhanTuVaoMang {
+public class AddElementInArray {
     public static void main(String[] args) {
         int[] numbers = {1, 2, 4, 5, 6, 8, 0};
         System.out.print("Property list: ");

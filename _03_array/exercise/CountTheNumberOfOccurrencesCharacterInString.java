@@ -2,7 +2,7 @@ package _03_loop.exercise;
 
 import java.util.Scanner;
 
-public class DemSoLanXuatHienKyTuTrongChuoi {
+public class CountTheNumberOfOccurrencesCharacterInString {
     public static void main(String[] args) {
         String string = "qwertyuigdfshuytt";
         Scanner scanner = new Scanner(System.in);

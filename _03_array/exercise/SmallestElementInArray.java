@@ -2,7 +2,7 @@ package _03_loop.exercise;
 
 import java.util.Scanner;
 
-public class PhanTuNhoNhatTrongMang {
+public class SmallestElementInArray {
     public static void main(String[] args) {
         int size;
         int[] array;

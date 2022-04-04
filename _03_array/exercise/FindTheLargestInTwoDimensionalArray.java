@@ -2,7 +2,8 @@ package _03_loop.exercise;
 
 import java.util.Scanner;
 
-public class TongCacSoOMotCot {
+public class FindTheLargestInTwoDimensionalArray {
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter Row of array: ");
@@ -13,27 +14,31 @@ public class TongCacSoOMotCot {
         double[][] arrays = new double[row][col];
         for (int i = 0; i < row; i++) {
             for (int j = 0; j < col; j++) {
-                System.out.print("Enter element " + (i + 1) + "_" + (j + 1) + " ");
+                System.out.print("Enter element "+(i+1)+"_"+(j+1)+" ");
                 arrays[i][j] = Double.parseDouble(scanner.nextLine());
             }
         }
         System.out.println("Array elements:");
         for (int i = 0; i < row; i++) {
-            for (int j = 0; j < col; j++) {
+            for (int j = 0; j < col; j++){
                 System.out.print(arrays[i][j] + "\t");
             }
             System.out.println();
         }
-        System.out.print("Enter the column want to calculate (start at 0): ");
-        int colSum = Integer.parseInt(scanner.nextLine());
-        int sum = 0;
-        if (colSum < 0 || colSum>arrays.length){
-            System.out.println("Out of range!");
-        }else {
-            for (int i = 0; i < row; i++) {
-                sum += arrays[i][colSum];
+
+        double max = 0;
+        int indexRow = 0;
+        int indexCol = 0;
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++){
+                if (max < arrays[i][j]){
+                    max = arrays[i][j];
+                    indexRow = i +1;
+                    indexCol = j+1;
+                }
             }
-            System.out.println("Sum of elements at column "+colSum+ " is "+sum);
         }
+        System.out.println("Max value in Array is "+max+" at row "+ indexRow+ " colunm "+indexCol);
+
     }
 }

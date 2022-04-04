@@ -1,6 +1,6 @@
 package _02_loop.exercise;
 
-public class HienThi20SoNguyenTo {
+public class Display20Primes {
     public static void main(String[] args) {
         int count = 0;
         int number = 2;

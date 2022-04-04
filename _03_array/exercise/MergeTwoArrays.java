@@ -2,7 +2,7 @@ package _03_loop.exercise;
 
 import java.util.Scanner;
 
-public class GopHaiMang {
+public class MergeTwoArrays {
     public static void main(String[] args) {
         int sizeArray1;
         int[] array1;

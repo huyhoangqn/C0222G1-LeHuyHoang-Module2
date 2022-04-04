@@ -2,7 +2,7 @@ package _02_loop.exercise;
 
 import java.util.Scanner;
 
-public class InRaCacLoaiHinh {
+public class DisplayShape {
     public static void main(String[] args) {
         int choice = -1;
         Scanner input = new Scanner(System.in);
