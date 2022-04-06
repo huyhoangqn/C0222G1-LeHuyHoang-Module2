@@ -1,4 +1,4 @@
-package test.test_student;
+package test.student_list;
 
 public class StudentList {
 
