@@ -10,6 +10,7 @@ public class ReadFileCSV {
     public static void main(String[] args) {
         List<National> nationalList = readNationalFromCSV(NATIONAL_FILE);
         System.out.println("List of national in csv file");
+
         for (National national : nationalList) {
             System.out.println(national);
         }
@@ -31,13 +32,14 @@ public class ReadFileCSV {
             int id = -1;
             String code = null;
             String nationalName = null;
+            National national;
             while ((line = bufferedReader.readLine()) != null) {
                 nationalString = line.split(",");
                 id = Integer.parseInt(nationalString[0]);
                 code = nationalString[1];
                 nationalName = nationalString[2];
 
-                National national = new National(id, code, nationalName);
+                national = new National(id, code, nationalName);
                 nationalList.add(national);
             }
 
