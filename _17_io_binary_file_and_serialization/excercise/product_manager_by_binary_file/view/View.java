@@ -15,11 +15,9 @@ public class View {
                 System.out.println("-----------------------------------------\n" +
                         "Main menu:\n" +
                         "1. Add new product\n" +
-                        "2. Delete product\n" +
-                        "3. Display product list\n" +
-                        "4. Searching product\n" +
-                        "5. Save to file\n" +
-                        "6. Exit");
+                        "2. Display product list\n" +
+                        "3. Searching product\n" +
+                        "4. Exit");
                 System.out.print("Enter your choice: ");
                 choice = Integer.parseInt(scanner.nextLine());
                 switch (choice) {
@@ -27,20 +25,12 @@ public class View {
                         productController.addNewProduct();
                         break;
                     case 2:
-                        System.out.print("Comming soon: ");
-                        break;
-                    case 3:
                         productController.displayProductList();
                         break;
+                    case 3:
+                        productController.searchProduct();
+                        break;
                     case 4:
-                        System.out.print("Enter product name: ");
-                        productName = scanner.nextLine();
-                        productController.searchProduct(productName);
-                        break;
-                    case 5:
-                        productController.saveToBianryFile();
-                        break;
-                    case 6:
                         System.exit(0);
                         break;
                     default:
