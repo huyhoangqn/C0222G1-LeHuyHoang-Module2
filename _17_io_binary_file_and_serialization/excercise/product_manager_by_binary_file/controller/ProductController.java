@@ -8,8 +8,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ProductController {
-    Scanner scanner = new Scanner(System.in);
-    List<Product> productList = new ArrayList<>();
+    static Scanner scanner = new Scanner(System.in);
+    static List<Product> productList = new ArrayList<>();
     final static String PRODUCT_SOURCE_FILE = "src\\_17_io_binary_file_and_serialization\\excercise\\product_manager_by_binary_file\\data\\Product.txt";
 
     public void addNewProduct() {
